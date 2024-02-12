@@ -4,7 +4,8 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
 function Page() {
-  const el = useRef<HTMLDivElement>(null);
+  const el = useRef<HTMLCanvasElement>(null);
+
   useEffect(() => {
     if (!el.current) {
       return;
@@ -12,38 +13,38 @@ function Page() {
 
     el.current.innerHTML = "";
 
+    // Scene
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(
-      75,
-      window.innerWidth / window.innerHeight,
-      0.1,
-      1000
-    );
 
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    el.current.appendChild(renderer.domElement);
-
+    // Object
     const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
+    const material = new THREE.MeshBasicMaterial({
+      color: 0xff0000,
+      wireframe: true,
+    });
+    const mesh = new THREE.Mesh(geometry, material);
 
-    camera.position.z = 5;
+    scene.add(mesh);
 
-    function animate() {
-      requestAnimationFrame(animate);
+    const sizes = {
+      width: 800,
+      height: 600,
+    };
 
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
+    // Camera
+    const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
+    camera.position.z = 3;
 
-      renderer.render(scene, camera);
-    }
+    scene.add(camera);
 
-    animate();
+    const renderer = new THREE.WebGLRenderer({
+      canvas: el.current,
+    });
+    renderer.setSize(sizes.width, sizes.height);
+    renderer.render(scene, camera);
   }, []);
 
-  return <div ref={el}></div>;
+  return <canvas ref={el}></canvas>;
 }
 
 export default Page;
