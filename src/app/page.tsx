@@ -12,10 +12,15 @@ export default function Home() {
         <Link href="/lessons/transform-objects">04. transform-objects</Link>
       </li>
       <li>
-        <Link href="/lessons/animation">04. animation</Link>
+        <Link href="/lessons/animation">05. Animation</Link>
       </li>
       <li>
-        <Link href="/lessons/camera">05. camera</Link>
+        <Link href="/lessons/camera">06. Camera</Link>
+      </li>
+      <li>
+        <Link href="/lessons/fullscreen-and-resizing">
+          07. Fullscreen and resizing
+        </Link>
       </li>
     </ul>
   );
