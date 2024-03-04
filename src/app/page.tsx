@@ -22,6 +22,12 @@ export default function Home() {
           07. Fullscreen and resizing
         </Link>
       </li>
+      <li>
+        <Link href="/lessons/vector">vector</Link>
+      </li>
+      <li>
+        <Link href="/lessons/geometry">geometry</Link>
+      </li>
     </ul>
   );
 }
