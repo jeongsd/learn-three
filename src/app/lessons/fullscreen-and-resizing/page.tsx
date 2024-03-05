@@ -8,8 +8,6 @@ function Page() {
   const el = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    console.log("s");
-
     if (!el.current) {
       return;
     }
