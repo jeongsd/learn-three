@@ -28,6 +28,9 @@ export default function Home() {
       <li>
         <Link href="/lessons/geometry">geometry</Link>
       </li>
+      <li>
+        <Link href="/lessons/debug-ui">debug-ui</Link>
+      </li>
     </ul>
   );
 }

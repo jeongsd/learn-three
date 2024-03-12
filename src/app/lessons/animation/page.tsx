@@ -48,14 +48,14 @@ function Page() {
     // let time = Date.now();
 
     // Clock
-    // const clock = new THREE.Clock();
+    const clock = new THREE.Clock();
 
-    gsap.to(mesh.position, { x: 2, duration: 1, delay: 1 });
-    gsap.to(mesh.position, { x: 0, duration: 1, delay: 2 });
+    // gsap.to(mesh.position, { x: 2, duration: 1, delay: 1 });
+    // gsap.to(mesh.position, { x: 0, duration: 1, delay: 2 });
 
     function tick() {
       // Clock
-      // const eslapsedTime = clock.getElapsedTime();
+      const eslapsedTime = clock.getElapsedTime();
 
       // Time
       // const currentTime = Date.now();
@@ -64,9 +64,11 @@ function Page() {
 
       // Update Objects
       // mesh.rotation.y += 0.002 * deltaTime;
-      // mesh.rotation.y = eslapsedTime * (Math.PI * 2);
-      // camera.position.y = Math.sin(eslapsedTime);
-      // camera.position.x = Math.cos(eslapsedTime);
+      mesh.rotation.y = eslapsedTime * (Math.PI * 2);
+
+      console.log("y", camera.position.y);
+      camera.position.y = Math.sin(eslapsedTime);
+      camera.position.x = Math.cos(eslapsedTime);
 
       // Render
       renderer.render(scene, camera);
