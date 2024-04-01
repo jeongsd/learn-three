@@ -23,13 +23,16 @@ export default function Home() {
         </Link>
       </li>
       <li>
-        <Link href="/lessons/vector">vector</Link>
+        <Link href="/lessons/vector">08. vector</Link>
       </li>
       <li>
-        <Link href="/lessons/geometry">geometry</Link>
+        <Link href="/lessons/geometry">09. geometry</Link>
       </li>
       <li>
         <Link href="/lessons/debug-ui">debug-ui</Link>
+      </li>
+      <li>
+        <Link href="/lessons/textures">10. textures</Link>
       </li>
     </ul>
   );
