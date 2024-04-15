@@ -38,6 +38,9 @@ export default function Home() {
         <li>
           <Link href="/lessons/material">11. material</Link>
         </li>
+        <li>
+          <Link href="/lessons/3d-text">12. 3d-text</Link>
+        </li>
       </ul>
     </div>
   );
