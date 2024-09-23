@@ -31,8 +31,8 @@ function Page() {
       const loadingManager = new THREE.LoadingManager();
       const textureLoader = new THREE.TextureLoader(loadingManager);
       const colorTexture = textureLoader.load(
-        // new URL("./assets/checkerboard-1024x1024.png", import.meta.url).href
-        new URL("./assets/minecraft.png", import.meta.url).href
+        new URL("./assets/checkerboard-1024x1024.png", import.meta.url).href
+        // new URL("./assets/minecraft.png", import.meta.url).href
         // new URL("./assets/door/color.jpg", import.meta.url).href
       );
 
@@ -82,17 +82,35 @@ function Page() {
         .name("center y");
 
       gui
-        .add(colorTexture, "magFilter")
+        .add(colorTexture, "minFilter")
         .options({
           NearestFilter: THREE.NearestFilter,
           LinearFilter: THREE.LinearFilter,
+          NearestMipmapNearestFilter: THREE.NearestMipmapNearestFilter,
+          NearestMipmapLinearFilter: THREE.NearestMipmapLinearFilter,
+          LinearMipmapNearestFilter: THREE.LinearMipmapNearestFilter,
+          LinearMipmapLinearFilter: THREE.LinearMipmapLinearFilter,
         })
         .onChange(() => {
           colorTexture.needsUpdate = true;
         });
-      colorTexture.minFilter = THREE.LinearMipmapLinearFilter;
+
+      gui
+        .add(colorTexture, "magFilter")
+        .options({
+          NearestFilter: THREE.NearestFilter,
+          LinearFilter: THREE.LinearFilter,
+          NearestMipmapNearestFilter: THREE.NearestMipmapNearestFilter,
+          NearestMipmapLinearFilter: THREE.NearestMipmapLinearFilter,
+          LinearMipmapNearestFilter: THREE.LinearMipmapNearestFilter,
+          LinearMipmapLinearFilter: THREE.LinearMipmapLinearFilter,
+        })
+        .onChange(() => {
+          colorTexture.needsUpdate = true;
+        });
+      // colorTexture.minFilter = THREE.LinearMipmapLinearFilter;
       //   colorTexture.magFilter = THREE.NearestFilter;
-      colorTexture.generateMipmaps = false;
+      // colorTexture.generateMipmaps = false;
 
       //   gui
       //     .add(colorTexture, "wrapS")
@@ -125,9 +143,8 @@ function Page() {
         new URL("./assets/door/roughness.jpg", import.meta.url).href
       );
 
-      //   colorTexture.minFilter = THREE.LinearFilter;
+      colorTexture.minFilter = THREE.LinearFilter;
       const material = new THREE.MeshBasicMaterial({
-        //   co lor: 0xff0000,
         map: colorTexture,
         // alphaMap: alphaTexture,
         // displacementMap: heightTexture,
