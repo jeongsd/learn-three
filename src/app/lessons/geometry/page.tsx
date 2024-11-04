@@ -22,21 +22,33 @@ function Page() {
     // const geometry = new THREE.BoxGeometry(1, 1, 1, 2);
 
     // prettier-ignore
-    // const positoniArray = new Float32Array([
-    //   0, 0, 0,
-    //   0, 1, 0,
-    //   1, 0, 0
-    // ]);
-    // const poistionAttribute = new THREE.BufferAttribute(positoniArray, 3);
+    const positoniArray = new Float32Array([
+      0, 0, 0,
+      0, 1, 0,
+      1, 0, 0,
+      1, 1, 0,
+    ]);
+    const poistionAttribute = new THREE.BufferAttribute(positoniArray, 3);
 
-    const count = 500000;
-    const positionsArray = new Float32Array(count * 3 * 3);
-    for (let i = 0; i < count * 3 * 3; i++) {
-      positionsArray[i] = Math.random() - 0.5;
-    }
+    // const count = 50;
+    // const positionsArray = new Float32Array(count * 3 * 4);
+    // for (let i = 0; i < count * 3 * 3; i++) {
+    //   positionsArray[i] = Math.random() - 0.5;
+    // }
     const geometry = new THREE.BufferGeometry();
-    const poistionAttribute = new THREE.BufferAttribute(positionsArray, 3);
+    // const poistionAttribute = new THREE.BufferAttribute(positionsArray, 3);
     geometry.setAttribute("position", poistionAttribute);
+
+    // Define indices to create two triangles forming a rectangle
+    const indices = new Uint16Array([
+      0,
+      1,
+      2, // First triangle
+      1,
+      2,
+      3, // Second triangle
+    ]);
+    geometry.setIndex(new THREE.BufferAttribute(indices, 1));
 
     const material = new THREE.MeshBasicMaterial({
       color: 0xff0000,

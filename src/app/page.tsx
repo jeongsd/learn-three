@@ -44,6 +44,12 @@ export default function Home() {
         <li>
           <Link href="/lessons/light">13. light</Link>
         </li>
+        <li>
+          <Link href="/lessons/shadow">14. shadow</Link>
+        </li>
+        <li>
+          <Link href="/lessons/haunted-house">haunted-house</Link>
+        </li>
       </ul>
     </div>
   );
