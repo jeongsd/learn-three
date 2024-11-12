@@ -48,7 +48,10 @@ export default function Home() {
           <Link href="/lessons/shadow">14. shadow</Link>
         </li>
         <li>
-          <Link href="/lessons/haunted-house">haunted-house</Link>
+          <Link href="/lessons/haunted-house">15. haunted-house</Link>
+        </li>
+        <li>
+          <Link href="/lessons/particle">16. particle</Link>
         </li>
       </ul>
     </div>
