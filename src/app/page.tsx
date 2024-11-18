@@ -53,6 +53,9 @@ export default function Home() {
         <li>
           <Link href="/lessons/particle">16. particle</Link>
         </li>
+        <li>
+          <Link href="/lessons/galaxy-generator">17. galaxy-generator</Link>
+        </li>
       </ul>
     </div>
   );
