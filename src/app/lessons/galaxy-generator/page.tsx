@@ -41,7 +41,7 @@ function Page() {
     let material: THREE.PointsMaterial | null = null;
     let points: THREE.Points | null = null;
 
-    const generateGalaxy = () => {
+    const generateBranch = (patternList: number[]) => {
       if (points && geometry && material) {
         geometry.dispose();
         material.dispose();
@@ -121,6 +121,8 @@ function Page() {
       points = new THREE.Points(geometry, material);
       scene.add(points);
     };
+
+    const generateGalaxy = () => {};
 
     gui
       .add(parameters, "count")

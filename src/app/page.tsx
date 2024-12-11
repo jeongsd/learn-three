@@ -56,6 +56,14 @@ export default function Home() {
         <li>
           <Link href="/lessons/galaxy-generator">17. galaxy-generator</Link>
         </li>
+        <li>
+          <Link href="/lessons/scroll-based-animation">
+            18. scroll-based-animation
+          </Link>
+        </li>
+        <li>
+          <Link href="/blood-soaked-eye">blood-soaked-eye</Link>
+        </li>
       </ul>
     </div>
   );
