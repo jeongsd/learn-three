@@ -18,6 +18,7 @@ function Page() {
             <Image src={result} alt="environment" fill />
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', maxWidth: '800px', margin: '0 auto' }}>
+
             <h1>기록</h1>
             <a href="https://webbtelescope.org/contents/news-releases/2024/news-2024-136#section-id-2">
                 https://webbtelescope.org/contents/news-releases/2024/news-2024-136#section-id-2
