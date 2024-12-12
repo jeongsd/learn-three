@@ -22,6 +22,10 @@ function Page() {
             <a href="https://webbtelescope.org/contents/news-releases/2024/news-2024-136#section-id-2">
                 https://webbtelescope.org/contents/news-releases/2024/news-2024-136#section-id-2
             </a>
+            <br />
+            <a href="https://docs.google.com/spreadsheets/d/1QeNb2eeTxZNWt9mlS20jKWObfs8-txzDODC6ELPHzh0/edit?usp=sharing">
+                https://docs.google.com/spreadsheets/d/1QeNb2eeTxZNWt9mlS20jKWObfs8-txzDODC6ELPHzh0/edit?usp=sharing
+            </a>
 
 
             <Image src={img1} alt="environment" width="800" />
