@@ -56,6 +56,12 @@ export default function Home() {
         <li>
           <Link href="/lessons/galaxy-generator">17. galaxy-generator</Link>
         </li>
+        <li>
+          <Link href="/lessons/scroll-based-animation">19. scroll-based-animation</Link>
+        </li>
+        <li>
+          <Link href="/lessons/physics">20. physics</Link>
+        </li>
       </ul>
     </div>
   );
