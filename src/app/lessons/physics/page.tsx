@@ -1,23 +1,26 @@
 'use client';
+
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import GUI from 'lil-gui';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+// @ts-ignore
 import CANNON from 'cannon';
 
-/**
- * Sizes
- */
-const sizes = {
-  width: window.innerWidth,
-  height: window.innerHeight,
-};
 
 function Page() {
   const el = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     let requestId: number;
+    /**
+   * Sizes
+   */
+    const sizes = {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+
 
     async function main() {
       if (!el.current) {
@@ -123,7 +126,7 @@ function Page() {
        */
 
       const concreteMaterial = new CANNON.Material('concrete')
-const plasticMaterial = new CANNON.Material('plastic')
+      const plasticMaterial = new CANNON.Material('plastic');
 
       const world = new CANNON.World();
 
