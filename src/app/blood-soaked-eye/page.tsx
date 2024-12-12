@@ -3,6 +3,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import './globals.css'
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import GUI from "lil-gui";
@@ -539,7 +540,7 @@ function Page() {
     );
     // camera.position.x = 1;
     // camera.position.y = 1;
-    camera.position.z = 50;
+    camera.position.z = 25;
     scene.add(camera);
 
     // Controls
