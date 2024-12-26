@@ -66,7 +66,13 @@ export default function Home() {
           <Link href='/lessons/physics'>20. physics</Link>
         </li>
         <li>
+          <Link href='/lessons/models'>21. models</Link>
+        </li>
+        <li>
           <Link href='/blood-soaked-eye'>blood-soaked-eye</Link>
+        </li>
+        <li>
+          <Link href='/lessons/raycaster'>22. raycaster</Link>
         </li>
       </ul>
     </div>
