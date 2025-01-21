@@ -74,6 +74,15 @@ export default function Home() {
         <li>
           <Link href='/lessons/raycaster'>22. raycaster</Link>
         </li>
+        <li>
+          <Link href='/lessons/realistic-render'>23. realistic-render</Link>
+        </li>
+        <li>
+          <Link href='/lessons/fiber'>55. fiber</Link>
+        </li>
+        <li>
+          <Link href='/lessons/environment'>58. environment</Link>
+        </li>
       </ul>
     </div>
   );
