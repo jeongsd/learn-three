@@ -83,6 +83,9 @@ export default function Home() {
         <li>
           <Link href='/lessons/environment'>58. environment</Link>
         </li>
+        <li>
+          <Link href='/lessons/r3f-3d-text'>60. r3f-3d-text</Link>
+        </li>
       </ul>
     </div>
   );
